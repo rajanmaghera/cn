@@ -74,24 +74,65 @@ function listWords(words) {
 
 // --- rendering --------------------------------------------------------------
 
-function paintTower(colours, mode) {
-  const svg = $("tower");
-  const grad = $("light");
-  svg.classList.toggle("rainbow", mode === "rainbow");
-  svg.classList.toggle("dark", mode === "dark");
+const SVG_NS = "http://www.w3.org/2000/svg";
 
+function svgEl(tag, attrs = {}) {
+  const el = document.createElementNS(SVG_NS, tag);
+  for (const [k, v] of Object.entries(attrs)) el.setAttribute(k, v);
+  return el;
+}
+
+function paletteFor({ colours = [], mode }) {
   const stops = mode === "rainbow" ? RAINBOW : colours.map((c) => COLOURS[c]).filter(Boolean);
-  const palette = stops.length ? stops : ["#ffffff"];
-  // Bands from the base upward, with a soft blend between neighbours.
-  grad.innerHTML = palette
-    .flatMap((c, i) => {
-      const a = (i / palette.length) * 100;
-      const b = ((i + 1) / palette.length) * 100;
-      return [`<stop offset="${a + (i ? 4 : 0)}%" stop-color="${c}"/>`, `<stop offset="${b - (i < palette.length - 1 ? 4 : 0)}%" stop-color="${c}"/>`];
-    })
-    .join("");
-  document.documentElement.style.setProperty("--lit", mode === "dark" ? "#2a2f4a" : palette[0]);
+  return stops.length ? stops : ["#ffffff"];
+}
+
+// One tower per spec ({colours, mode: "colour" | "rainbow" | "dark", title}), side by side.
+function paintTowers(specs) {
+  const wrap = $("towers");
+  wrap.replaceChildren();
+  wrap.classList.remove("focus");
+  const svgs = specs.map((spec, n) => {
+    const palette = paletteFor(spec);
+    const id = `light-${n}`;
+    const svg = svgEl("svg", { viewBox: "0 0 140 620" });
+    if (spec.mode === "rainbow" || spec.mode === "dark") svg.classList.add(spec.mode);
+    if (spec.title) svg.append(Object.assign(svgEl("title"), { textContent: spec.title }));
+    // Bands from the base upward, with a soft blend between neighbours.
+    const grad = svgEl("linearGradient", { id, x1: 0, y1: 1, x2: 0, y2: 0 });
+    palette.forEach((c, i) => {
+      const a = (i / palette.length) * 100 + (i ? 4 : 0);
+      const b = ((i + 1) / palette.length) * 100 - (i < palette.length - 1 ? 4 : 0);
+      grad.append(svgEl("stop", { offset: `${a}%`, "stop-color": c }), svgEl("stop", { offset: `${b}%`, "stop-color": c }));
+    });
+    const defs = svgEl("defs");
+    defs.append(grad);
+    svg.append(
+      defs,
+      svgEl("use", { href: "#tower-shape", class: "lit", fill: `url(#${id})` }),
+      svgEl("use", { href: "#tower-windows", class: "windows" }),
+    );
+    wrap.append(svg);
+    return svg;
+  });
+  const first = specs[0] || {};
+  const palette = paletteFor(first);
+  document.documentElement.style.setProperty("--lit", first.mode === "dark" ? "#2a2f4a" : palette[0]);
   document.documentElement.style.setProperty("--accent", palette.find((c) => c !== "#f4f6fb") || "#ff5fa2");
+  return svgs;
+}
+
+// Hovering (or focusing) a cause's card spotlights its tower, and vice versa.
+function pair(tower, card) {
+  const on = () => { $("towers").classList.add("focus"); tower.classList.add("active"); card.classList.add("active"); };
+  const off = () => { $("towers").classList.remove("focus"); tower.classList.remove("active"); card.classList.remove("active"); };
+  for (const el of [tower, card]) {
+    el.addEventListener("pointerenter", on);
+    el.addEventListener("pointerleave", off);
+  }
+  card.tabIndex = 0;
+  card.addEventListener("focus", on);
+  card.addEventListener("blur", off);
 }
 
 function swatch(colour) {
@@ -156,27 +197,35 @@ function render(iso) {
     else if (colours.length) headline = `${when}, the CN Tower ${verb} lit ${listWords(colours)}`;
     else headline = `${when}, the CN Tower ${verb} lit up for something special`;
     $("headline").textContent = headline;
-    paintTower(colours, onlyRainbow ? "rainbow" : "colour");
     if (one) {
+      paintTowers([{ colours, mode: onlyRainbow ? "rainbow" : "colour" }]);
       colours.forEach((c) => chips.append(chip(c)));
       reasons.append(reasonCard(one, "Why"));
     } else {
-      // Several causes share the night; each card says which colours belong to it.
-      found.forEach((e) => reasons.append(reasonCard(e, e)));
+      // Several causes share the night: one tower each, in the same order as their cards.
+      const towers = paintTowers(found.map((e) => {
+        const c = e.colours || [];
+        return { colours: c, mode: c.length && c.every((x) => x === "rainbow") ? "rainbow" : "colour", title: `${e.colour_name || listWords(c)}: ${e.description}` };
+      }));
+      found.forEach((e, i) => {
+        const card = reasonCard(e, e);
+        reasons.append(card);
+        pair(towers[i], card);
+      });
     }
   } else if (!entries.length) {
     $("headline").textContent = "The lighting schedule hasn't been fetched yet";
-    paintTower([], "rainbow");
+    paintTowers([{ mode: "rainbow" }]);
     reasons.append(reasonCard({ description: "Check back soon. The schedule is refreshed from cntower.ca automatically every few hours." }, "Hang tight"));
   } else if (!isCovered(iso)) {
     $("headline").textContent = `${when}: not on the schedule yet`;
-    paintTower([], "dark");
+    paintTowers([{ mode: "dark" }]);
     reasons.append(reasonCard({ description: iso > lastDate()
       ? "The CN Tower only publishes its lighting a few weeks ahead, so nothing has been announced for this night yet."
       : "This night is from before we started keeping track, so we don't know why it was lit." }, "Unknown"));
   } else {
     $("headline").textContent = `${when}, the CN Tower ${isPast ? "had" : iso === tonight() ? "has" : "will have"} its regular nightly lights`;
-    paintTower([], "rainbow");
+    paintTowers([{ mode: "rainbow" }]);
     reasons.append(reasonCard({ description: "No special lighting is scheduled, so the tower runs its standard nightly light show rather than a colour picked for a cause, holiday or event." }, "Why"));
   }
 
