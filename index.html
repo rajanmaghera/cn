@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Why Is the CN Tower That Colour?</title>
+  <meta name="description" content="Find out why the CN Tower is lit the colour it is tonight, or on any other night.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M15.6 1h.8v9h1.2l.4 4h1.5a2 2 0 0 1 0 3.4h-1.3L19 31h-6l.8-13.6h-1.3a2 2 0 0 1 0-3.4H14l.4-4h1.2z' fill='%23ff5fa2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+
+  <main>
+    <header>
+      <p class="eyebrow">CN Tower · Toronto</p>
+      <nav class="night-nav" aria-label="Choose a night">
+        <button id="prev" type="button" aria-label="Previous night">‹</button>
+        <label class="date-pick">
+          <span id="when">Tonight</span>
+          <input id="date" type="date" aria-label="Pick a date">
+        </label>
+        <button id="next" type="button" aria-label="Next night">›</button>
+      </nav>
+    </header>
+
+    <section class="scene">
+      <svg id="tower" viewBox="0 0 200 620" role="img" aria-labelledby="headline">
+        <defs>
+          <linearGradient id="light" x1="0" y1="1" x2="0" y2="0"></linearGradient>
+          <filter id="glow" x="-200%" y="-20%" width="500%" height="140%">
+            <feGaussianBlur stdDeviation="7" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <g id="tower-lit" filter="url(#glow)">
+          <!-- antenna -->
+          <rect x="98.6" y="8" width="2.8" height="92" rx="1.4"/>
+          <!-- SkyPod -->
+          <rect x="91" y="96" width="18" height="10" rx="4"/>
+          <!-- upper shaft -->
+          <polygon points="96.5,106 103.5,106 105,160 95,160"/>
+          <!-- main pod -->
+          <path d="M70 168 Q70 160 80 160 H120 Q130 160 130 168 V178 Q130 190 118 192 H82 Q70 190 70 178 Z"/>
+          <!-- main shaft, three legs -->
+          <polygon points="93,192 107,192 118,612 82,612"/>
+          <polygon points="88,250 93,250 76,612 66,612"/>
+          <polygon points="107,250 112,250 134,612 124,612"/>
+        </g>
+        <g class="pod-windows" aria-hidden="true">
+          <rect x="74" y="172" width="52" height="3" rx="1.5"/>
+          <rect x="93" y="100" width="14" height="2" rx="1"/>
+        </g>
+      </svg>
+      <div class="ground" aria-hidden="true"></div>
+    </section>
+
+    <section class="story" aria-live="polite">
+      <h1 id="headline">Loading tonight's lights…</h1>
+      <div id="chips" class="chips"></div>
+      <div id="reasons"></div>
+    </section>
+
+    <section class="upcoming" id="upcoming-wrap" hidden>
+      <h2>Coming up</h2>
+      <ol id="upcoming"></ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>Schedule from the <a id="source" href="https://www.cntower.ca/lighting-schedule" rel="noopener">official CN Tower lighting schedule</a><span id="updated"></span><br>
+    Not affiliated with the CN Tower.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

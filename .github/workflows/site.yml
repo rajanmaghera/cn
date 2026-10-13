@@ -1,0 +1,82 @@
+name: Update schedule and deploy
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    # Every 6 hours; the CN Tower adds and changes nights with little notice.
+    - cron: "17 */6 * * *"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: site-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m unittest discover -s tests -t tests -v
+
+  scrape:
+    needs: test
+    # Only refresh data on the default branch; PRs and feature branches just run tests.
+    if: github.event_name != 'pull_request' && github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Scrape cntower.ca
+        run: python scripts/scrape.py
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- data/schedule.json; then
+            echo "Schedule unchanged."
+            exit 0
+          fi
+          # Ignore changes that only bump the "updated" timestamp.
+          if [ "$(git diff -U0 -- data/schedule.json | grep -E '^[+-] ' | grep -vc '"updated"')" = "0" ]; then
+            echo "Only the timestamp changed; not committing."
+            git checkout -- data/schedule.json
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898732+github-actions[bot]@users.noreply.github.com"
+          git add data/schedule.json
+          git commit -m "Update CN Tower lighting schedule"
+          git push
+
+  deploy:
+    needs: scrape
+    # Deploy even if the scrape failed, so the site still ships with the last good data.
+    if: always() && needs.scrape.result != 'skipped'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - name: Collect site files
+        run: |
+          mkdir -p _site/data
+          cp index.html style.css app.js _site/
+          cp data/schedule.json _site/data/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
