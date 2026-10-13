@@ -74,6 +74,8 @@ jobs:
           mkdir -p _site/data
           cp index.html style.css app.js _site/
           cp data/schedule.json _site/data/
+          mkdir -p _site/widget
+          cp widget/cn-tower.js _site/widget/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
