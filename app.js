@@ -9,7 +9,8 @@ const COLOURS = {
   aqua: "#33e0e6", cyan: "#33e0e6", "light blue": "#5cc8ff", "sky blue": "#5cc8ff",
   blue: "#2563ff", navy: "#1b2f8f", "royal blue": "#2848d8", indigo: "#4b2fd6",
   violet: "#8f4dff", purple: "#8a2be2", lavender: "#b38cff", lilac: "#c39bff",
-  silver: "#c9d1dc", white: "#f4f6fb",
+  periwinkle: "#8f9cff", silver: "#c9d1dc", white: "#f4f6fb", grey: "#8a8f9c", gray: "#8a8f9c",
+  black: "#26262e", brown: "#8a5a2b",
 };
 const RAINBOW = ["#ff2a2a", "#ff9a1a", "#ffe11a", "#1fbf4c", "#2563ff", "#8a2be2"];
 const TZ = "America/Toronto";
@@ -93,23 +94,30 @@ function paintTower(colours, mode) {
   document.documentElement.style.setProperty("--accent", palette.find((c) => c !== "#f4f6fb") || "#ff5fa2");
 }
 
-function chip(colour) {
-  const el = document.createElement("span");
-  el.className = "chip";
+function swatch(colour) {
   const dot = document.createElement("i");
   if (colour === "rainbow") dot.style.background = `conic-gradient(${RAINBOW.join(",")},${RAINBOW[0]})`;
   else dot.style.background = COLOURS[colour] || "#fff";
   dot.style.color = COLOURS[colour] || "#fff";
-  el.append(dot, colour);
+  dot.title = colour;
+  return dot;
+}
+
+function chip(colour) {
+  const el = document.createElement("span");
+  el.className = "chip";
+  el.append(swatch(colour), colour);
   return el;
 }
 
+// label: plain text, or an entry whose colours become the label ("● ● Red and Blue").
 function reasonCard(entry, label) {
   const card = document.createElement("article");
   card.className = "reason";
   const l = document.createElement("p");
   l.className = "label";
-  l.textContent = label;
+  if (typeof label === "string") l.textContent = label;
+  else l.append(...(label.colours || []).map(swatch), label.colour_name || listWords(label.colours || []) || "Special lighting");
   const p = document.createElement("p");
   p.textContent = entry.description;
   card.append(l, p);
@@ -139,15 +147,23 @@ function render(iso) {
   reasons.replaceChildren();
 
   if (found.length) {
-    const nice = colours.filter((c) => c !== "rainbow");
+    const onlyRainbow = colours.length > 0 && colours.every((c) => c === "rainbow");
+    const one = found.length === 1 ? found[0] : null;
     let headline;
-    if (colours.includes("rainbow") && !nice.length) headline = `${when}, the CN Tower ${verb} lit in rainbow colours`;
+    if (!one) headline = `${when}, the CN Tower ${verb} lit up for ${found.length} causes`;
+    else if (onlyRainbow) headline = `${when}, the CN Tower ${verb} lit in rainbow colours`;
+    else if (one.colour_name) headline = `${when}, the CN Tower ${verb} lit ${one.colour_name.toLowerCase()}`;
     else if (colours.length) headline = `${when}, the CN Tower ${verb} lit ${listWords(colours)}`;
     else headline = `${when}, the CN Tower ${verb} lit up for something special`;
     $("headline").textContent = headline;
-    paintTower(colours, colours.includes("rainbow") && !nice.length ? "rainbow" : "colour");
-    colours.forEach((c) => chips.append(chip(c)));
-    found.forEach((e, i) => reasons.append(reasonCard(e, found.length > 1 ? `Reason ${i + 1} of ${found.length}` : "Why")));
+    paintTower(colours, onlyRainbow ? "rainbow" : "colour");
+    if (one) {
+      colours.forEach((c) => chips.append(chip(c)));
+      reasons.append(reasonCard(one, "Why"));
+    } else {
+      // Several causes share the night; each card says which colours belong to it.
+      found.forEach((e) => reasons.append(reasonCard(e, e)));
+    }
   } else if (!entries.length) {
     $("headline").textContent = "The lighting schedule hasn't been fetched yet";
     paintTower([], "rainbow");
@@ -189,12 +205,7 @@ function renderUpcoming(from) {
     day.textContent = relativeLabel(d) === "Tomorrow night" ? "Tomorrow" : fmt(d, { weekday: "short", month: "short", day: "numeric" });
     const dots = document.createElement("span");
     dots.className = "dots";
-    for (const c of coloursOf(found)) {
-      const i = document.createElement("i");
-      i.style.background = c === "rainbow" ? `conic-gradient(${RAINBOW.join(",")})` : COLOURS[c];
-      i.title = c;
-      dots.append(i);
-    }
+    for (const c of coloursOf(found).slice(0, 4)) dots.append(swatch(c));
     const desc = document.createElement("span");
     desc.className = "desc";
     desc.textContent = found.map((e) => e.description).join(" / ");

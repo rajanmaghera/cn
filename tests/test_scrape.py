@@ -42,13 +42,29 @@ class ParseScheduleTest(unittest.TestCase):
             [("2026-12-31", "2026-12-31"), ("2027-01-01", "2027-01-01"), ("2027-01-26", "2027-02-01")],
         )
         self.assertEqual(entries[0]["colours"], ["rainbow"])
-        self.assertIn("Lunar New Year", entries[2]["description"])
+        self.assertEqual(entries[0]["colour_name"], "Rainbow")
+        self.assertEqual(entries[2]["description"], "Lunar New Year celebrations")
 
     def test_inline_date_and_reason(self):
         entries = parse("inline.html")
         self.assertEqual(entries[0]["start"], "2026-10-13")
         self.assertEqual(entries[0]["description"], "Orange for Thanksgiving")
         self.assertEqual(entries[1]["colours"], ["teal"])
+
+    def test_current_cntower_layout(self):
+        entries = parse("cntower_2026.html")
+        self.assertEqual(
+            [(e["start"], e["colour_name"], e["description"]) for e in entries],
+            [
+                ("2026-10-12", "Teal", "DCD Awareness Week"),
+                ("2026-10-13", "Green, Pink and Teal", "Metastatic Breast Cancer Awareness Day"),
+                ("2026-10-13", "Red and Blue", "World Thrombosis Day"),
+                ("2026-10-21", "Red and Black", "Toronto Raptor’s first home game. Let’s Go Raptors!"),
+                ("2026-11-30", "Periwinkle", "Stomach Cancer Awareness Day"),
+            ],
+        )
+        self.assertEqual(entries[1]["colours"], ["green", "pink", "teal"])
+        self.assertEqual(entries[3]["colours"], ["red", "black"])
 
     def test_no_dates_returns_nothing(self):
         self.assertEqual(scrape.parse_schedule("<p>Nothing here</p>", TODAY), [])

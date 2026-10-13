@@ -70,8 +70,16 @@ COLOURS = [
     "light blue", "sky blue", "royal blue",
     "red", "crimson", "maroon", "burgundy", "pink", "magenta", "fuchsia", "orange", "amber",
     "gold", "yellow", "lime", "green", "emerald", "teal", "turquoise", "aqua", "cyan", "blue",
-    "navy", "indigo", "violet", "purple", "lavender", "lilac", "silver", "white", "rainbow",
+    "navy", "indigo", "violet", "purple", "lavender", "lilac", "periwinkle", "silver", "white",
+    "grey", "gray", "black", "brown", "rainbow",
 ]
+COLOUR_MODIFIERS = r"(?:dark|light|bright|pale|deep|hot|neon|baby|forest|kelly)"
+# A line that is only a list of colours, e.g. "Dark Blue, White and Black".
+COLOUR_LINE_RE = re.compile(
+    rf"^(?:(?:{COLOUR_MODIFIERS}\s+)?(?:{'|'.join(sorted(COLOURS, key=len, reverse=True))})"
+    rf"(?:\s*(?:,|&|/|\band\b|\bwith\b)\s*|\s*$))+$",
+    re.IGNORECASE,
+)
 COLOUR_RE = re.compile(
     r"\b(" + "|".join(sorted((re.escape(c) for c in COLOURS), key=len, reverse=True)) + r")\b",
     re.IGNORECASE,
@@ -84,12 +92,14 @@ BLOCK_TAGS = {
     "tbody", "td", "th", "thead", "time", "tr", "ul",
 }
 SKIP_TAGS = {"script", "style", "noscript", "svg", "template", "head", "iframe"}
-# Page chrome that isn't part of the schedule.
+# Page chrome that isn't part of the schedule. These also end the entry above them,
+# so section headings and footers don't get glued onto the last night listed.
 NOISE_RE = re.compile(
-    r"^(buy tickets?|book now|learn more|read more|share|menu|search|close|"
+    r"^(buy tickets?|book now|learn more|read more|see details|view details|details|share|"
+    r"menu|search|close|tonight|today|upcoming( lightings?)?|past lightings?|"
     r"lighting schedule|lighting requests?|lighting information|"
-    r"subscribe|sign up|privacy|terms|cookies?|©.*|copyright.*|"
-    r"(?:mon|tue|wed|thu|fri|sat|sun)[a-z]*)$",
+    r"join our newsletter.*|get the latest.*|subscribe.*|sign up.*|privacy.*|terms.*|"
+    r"cookies?.*|©.*|copyright.*|(?:mon|tue|wed|thu|fri|sat|sun)[a-z]*)$",
     re.IGNORECASE,
 )
 
@@ -208,11 +218,13 @@ def _clean_reason(lines: list[str]) -> str:
 
 def parse_schedule(page: str, today: dt.date | None = None) -> list[dict]:
     today = today or dt.date.today()
-    lines = [l for l in html_to_lines(page) if not NOISE_RE.match(l)]
-
     entries: list[dict] = []
     current = None
-    for line in lines:
+    for line in html_to_lines(page):
+        if NOISE_RE.match(line):
+            if current:
+                current["closed"] = True
+            continue
         parsed = parse_date_line(line, today)
         if parsed:
             start, end, rest = parsed
@@ -224,16 +236,25 @@ def parse_schedule(page: str, today: dt.date | None = None) -> list[dict]:
             if current:
                 entries.append(current)
             current = {"start": start, "end": end, "lines": [rest] if rest else []}
-        elif current is not None and len(current["lines"]) < 6:
-            current["lines"].append(line)
+        elif current is not None and not current.get("closed") and len(current["lines"]) < 6:
+            if line not in current["lines"]:
+                current["lines"].append(line)
     if current:
         entries.append(current)
 
     out = []
     seen = set()
     for e in entries:
-        reason = _clean_reason(e["lines"])
-        if not reason or len(reason) < 3:
+        # cntower.ca lists each night as "<colours>", "<occasion>"; split them apart so the
+        # site can say what colour it is and, separately, why.
+        colour_lines = [l for l in e["lines"] if COLOUR_LINE_RE.match(l)]
+        reason = _clean_reason([l for l in e["lines"] if l not in colour_lines])
+        colour_name = colour_lines[0] if colour_lines else ""
+        if not reason:
+            reason, colour_name = colour_name, ""
+        if colour_name and reason.lower().endswith(" " + colour_name.lower()):
+            reason = reason[: -len(colour_name)].rstrip(" ,.-–—·")
+        if len(reason) < 3:
             continue
         # Keep things tidy if a page footer slipped through.
         reason = reason[:600]
@@ -246,7 +267,8 @@ def parse_schedule(page: str, today: dt.date | None = None) -> list[dict]:
                 "start": e["start"].isoformat(),
                 "end": e["end"].isoformat(),
                 "description": reason,
-                "colours": find_colours(reason),
+                "colour_name": colour_name,
+                "colours": find_colours(colour_name or reason),
             }
         )
     out.sort(key=lambda x: (x["start"], x["end"]))

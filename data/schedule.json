@@ -5,7 +5,8 @@
     {
       "start": "2026-09-30",
       "end": "2026-09-30",
-      "description": "Orange · National Day for Truth and Reconciliation · Orange",
+      "description": "National Day for Truth and Reconciliation",
+      "colour_name": "Orange",
       "colours": [
         "orange"
       ]
@@ -13,7 +14,8 @@
     {
       "start": "2026-09-30",
       "end": "2026-09-30",
-      "description": "Orange · Orange shirt day: Every Child Matters · Orange",
+      "description": "Orange shirt day: Every Child Matters",
+      "colour_name": "Orange",
       "colours": [
         "orange"
       ]
@@ -21,7 +23,8 @@
     {
       "start": "2026-09-30",
       "end": "2026-09-30",
-      "description": "Purple · International Recovery Day · Purple",
+      "description": "International Recovery Day",
+      "colour_name": "Purple",
       "colours": [
         "purple"
       ]
@@ -29,7 +32,8 @@
     {
       "start": "2026-09-30",
       "end": "2026-09-30",
-      "description": "Purple · Rowan's Law Day (Concussion Safety) · Purple",
+      "description": "Rowan's Law Day (Concussion Safety)",
+      "colour_name": "Purple",
       "colours": [
         "purple"
       ]
@@ -37,7 +41,8 @@
     {
       "start": "2026-10-01",
       "end": "2026-10-01",
-      "description": "Green · World Liver Cancer Month · Green",
+      "description": "World Liver Cancer Month",
+      "colour_name": "Green",
       "colours": [
         "green"
       ]
@@ -45,7 +50,8 @@
     {
       "start": "2026-10-01",
       "end": "2026-10-01",
-      "description": "Pink · Canadian Cancer Society's Run for the Cure · Pink",
+      "description": "Canadian Cancer Society's Run for the Cure",
+      "colour_name": "Pink",
       "colours": [
         "pink"
       ]
@@ -53,16 +59,19 @@
     {
       "start": "2026-10-01",
       "end": "2026-10-01",
-      "description": "Yellow, White and Black · The Tyler Effect - to raise awareness for victims of crime and to end gun violence · Yellow, White and Black",
+      "description": "The Tyler Effect - to raise awareness for victims of crime and to end gun violence",
+      "colour_name": "Yellow, White and Black",
       "colours": [
         "yellow",
-        "white"
+        "white",
+        "black"
       ]
     },
     {
       "start": "2026-10-02",
       "end": "2026-10-02",
-      "description": "Yellow · International Wrongful Conviction Day · Yellow",
+      "description": "International Wrongful Conviction Day",
+      "colour_name": "Yellow",
       "colours": [
         "yellow"
       ]
@@ -70,24 +79,29 @@
     {
       "start": "2026-10-03",
       "end": "2026-10-03",
-      "description": "Black and White · Nuit Blanche · Black and White",
+      "description": "Nuit Blanche",
+      "colour_name": "Black and White",
       "colours": [
+        "black",
         "white"
       ]
     },
     {
       "start": "2026-10-03",
       "end": "2026-10-03",
-      "description": "Blue, White and Black · Laps for Life - Cancer Research Fundraiser · Blue, White and Black",
+      "description": "Laps for Life - Cancer Research Fundraiser",
+      "colour_name": "Blue, White and Black",
       "colours": [
         "blue",
-        "white"
+        "white",
+        "black"
       ]
     },
     {
       "start": "2026-10-06",
       "end": "2026-10-06",
-      "description": "Green · World Cerebral Palsy Awareness Day · Green",
+      "description": "World Cerebral Palsy Awareness Day",
+      "colour_name": "Green",
       "colours": [
         "green"
       ]
@@ -95,7 +109,8 @@
     {
       "start": "2026-10-07",
       "end": "2026-10-07",
-      "description": "Teal, Blue and Light Blue · TNNME (International trigeminal neuralgia day) · Teal, Blue and Light Blue",
+      "description": "TNNME (International trigeminal neuralgia day)",
+      "colour_name": "Teal, Blue and Light Blue",
       "colours": [
         "teal",
         "blue",
@@ -105,7 +120,8 @@
     {
       "start": "2026-10-08",
       "end": "2026-10-08",
-      "description": "Red · Dyslexia Awareness Month · Red",
+      "description": "Dyslexia Awareness Month",
+      "colour_name": "Red",
       "colours": [
         "red"
       ]
@@ -113,7 +129,8 @@
     {
       "start": "2026-10-09",
       "end": "2026-10-09",
-      "description": "Green · PANDAS/PANS Awareness Day (Pediatric Acute-onset Neuropsychiatric Syndrome) · Green",
+      "description": "PANDAS/PANS Awareness Day (Pediatric Acute-onset Neuropsychiatric Syndrome)",
+      "colour_name": "Green",
       "colours": [
         "green"
       ]
@@ -121,7 +138,8 @@
     {
       "start": "2026-10-10",
       "end": "2026-10-10",
-      "description": "Green, Blue and Yellow · World Homeless Day · Green, Blue and Yellow",
+      "description": "World Homeless Day",
+      "colour_name": "Green, Blue and Yellow",
       "colours": [
         "green",
         "blue",
@@ -131,7 +149,8 @@
     {
       "start": "2026-10-10",
       "end": "2026-10-10",
-      "description": "Purple · World Mental Health Day · Purple",
+      "description": "World Mental Health Day",
+      "colour_name": "Purple",
       "colours": [
         "purple"
       ]
@@ -139,7 +158,8 @@
     {
       "start": "2026-10-11",
       "end": "2026-10-11",
-      "description": "Pink and Orange · International Day of the Girl Child · Pink and Orange",
+      "description": "International Day of the Girl Child",
+      "colour_name": "Pink and Orange",
       "colours": [
         "pink",
         "orange"
@@ -148,7 +168,8 @@
     {
       "start": "2026-10-11",
       "end": "2026-10-11",
-      "description": "Teal · OCD Awareness Week · Teal",
+      "description": "OCD Awareness Week",
+      "colour_name": "Teal",
       "colours": [
         "teal"
       ]
@@ -156,7 +177,8 @@
     {
       "start": "2026-10-12",
       "end": "2026-10-12",
-      "description": "Orange, Red and Yellow · Thanksgiving · Orange, Red and Yellow",
+      "description": "Thanksgiving",
+      "colour_name": "Orange, Red and Yellow",
       "colours": [
         "orange",
         "red",
@@ -166,7 +188,8 @@
     {
       "start": "2026-10-12",
       "end": "2026-10-12",
-      "description": "Pink · Breast Cancer Awareness Month · Pink",
+      "description": "Breast Cancer Awareness Month",
+      "colour_name": "Pink",
       "colours": [
         "pink"
       ]
@@ -174,7 +197,8 @@
     {
       "start": "2026-10-12",
       "end": "2026-10-12",
-      "description": "Teal · DCD Awareness Week · Teal · Tonight",
+      "description": "DCD Awareness Week",
+      "colour_name": "Teal",
       "colours": [
         "teal"
       ]
@@ -182,7 +206,8 @@
     {
       "start": "2026-10-13",
       "end": "2026-10-13",
-      "description": "Green, Pink and Teal · Metastatic Breast Cancer Awareness Day · Green, Pink and Teal",
+      "description": "Metastatic Breast Cancer Awareness Day",
+      "colour_name": "Green, Pink and Teal",
       "colours": [
         "green",
         "pink",
@@ -192,7 +217,8 @@
     {
       "start": "2026-10-13",
       "end": "2026-10-13",
-      "description": "Red and Blue · World Thrombosis Day · Red and Blue · Upcoming Lightings",
+      "description": "World Thrombosis Day",
+      "colour_name": "Red and Blue",
       "colours": [
         "red",
         "blue"
@@ -201,7 +227,8 @@
     {
       "start": "2026-10-15",
       "end": "2026-10-15",
-      "description": "Dark Blue and Purple · National Disability Employment Awareness Month (NDEAM) · Dark Blue and Purple",
+      "description": "National Disability Employment Awareness Month (NDEAM)",
+      "colour_name": "Dark Blue and Purple",
       "colours": [
         "blue",
         "purple"
@@ -210,7 +237,8 @@
     {
       "start": "2026-10-15",
       "end": "2026-10-15",
-      "description": "Pink, Light Blue and Purple · International Pregnancy and Infant Loss Remembrance Day and National Pregnancy and Infant Loss Awareness Month · Pink, Light Blue and Purple",
+      "description": "International Pregnancy and Infant Loss Remembrance Day and National Pregnancy and Infant Loss Awareness Month",
+      "colour_name": "Pink, Light Blue and Purple",
       "colours": [
         "pink",
         "light blue",
@@ -220,7 +248,8 @@
     {
       "start": "2026-10-16",
       "end": "2026-10-16",
-      "description": "Blue · World Food Day · Blue",
+      "description": "World Food Day",
+      "colour_name": "Blue",
       "colours": [
         "blue"
       ]
@@ -228,15 +257,18 @@
     {
       "start": "2026-10-17",
       "end": "2026-10-17",
-      "description": "Yellow and Black · National Slow Down, Move Over - in support of tow truck driver safety · Yellow and Black",
+      "description": "National Slow Down, Move Over - in support of tow truck driver safety",
+      "colour_name": "Yellow and Black",
       "colours": [
-        "yellow"
+        "yellow",
+        "black"
       ]
     },
     {
       "start": "2026-10-18",
       "end": "2026-10-18",
-      "description": "Pink and Purple · Persons Day · Pink and Purple",
+      "description": "Persons Day",
+      "colour_name": "Pink and Purple",
       "colours": [
         "pink",
         "purple"
@@ -245,7 +277,8 @@
     {
       "start": "2026-10-19",
       "end": "2026-10-19",
-      "description": "Teal and Orange · National Psoriatic Arthritis Awareness Day · Teal and Orange",
+      "description": "National Psoriatic Arthritis Awareness Day",
+      "colour_name": "Teal and Orange",
       "colours": [
         "teal",
         "orange"
@@ -254,7 +287,8 @@
     {
       "start": "2026-10-20",
       "end": "2026-10-20",
-      "description": "Purple · International Domestic Violence Awareness Month · Purple",
+      "description": "International Domestic Violence Awareness Month",
+      "colour_name": "Purple",
       "colours": [
         "purple"
       ]
@@ -262,7 +296,8 @@
     {
       "start": "2026-10-20",
       "end": "2026-10-20",
-      "description": "Purple · International Mastocytosis & Mast Cell Activation Syndrome Awareness Day · Purple",
+      "description": "International Mastocytosis & Mast Cell Activation Syndrome Awareness Day",
+      "colour_name": "Purple",
       "colours": [
         "purple"
       ]
@@ -270,7 +305,8 @@
     {
       "start": "2026-10-21",
       "end": "2026-10-21",
-      "description": "Purple · Child Care Worker and Early Childhood Educator Appreciation Day · Purple",
+      "description": "Child Care Worker and Early Childhood Educator Appreciation Day",
+      "colour_name": "Purple",
       "colours": [
         "purple"
       ]
@@ -278,15 +314,18 @@
     {
       "start": "2026-10-21",
       "end": "2026-10-21",
-      "description": "Red and Black · Toronto Raptor’s first home game. Let’s Go Raptors! Red and Black · See details",
+      "description": "Toronto Raptor’s first home game. Let’s Go Raptors!",
+      "colour_name": "Red and Black",
       "colours": [
-        "red"
+        "red",
+        "black"
       ]
     },
     {
       "start": "2026-10-22",
       "end": "2026-10-22",
-      "description": "Green · International Phelan-McDermid Syndrome Awareness Day · Green",
+      "description": "International Phelan-McDermid Syndrome Awareness Day",
+      "colour_name": "Green",
       "colours": [
         "green"
       ]
@@ -294,7 +333,8 @@
     {
       "start": "2026-10-22",
       "end": "2026-10-22",
-      "description": "Teal · International Stuttering Awareness Day · Teal",
+      "description": "International Stuttering Awareness Day",
+      "colour_name": "Teal",
       "colours": [
         "teal"
       ]
@@ -302,7 +342,8 @@
     {
       "start": "2026-10-24",
       "end": "2026-10-24",
-      "description": "Red, White and Gold · Light the Night – In support of blood cancer awareness · Red, White and Gold",
+      "description": "Light the Night – In support of blood cancer awareness",
+      "colour_name": "Red, White and Gold",
       "colours": [
         "red",
         "white",
@@ -312,7 +353,8 @@
     {
       "start": "2026-10-25",
       "end": "2026-10-25",
-      "description": "Teal · Dysautonomia Awareness Month · Teal",
+      "description": "Dysautonomia Awareness Month",
+      "colour_name": "Teal",
       "colours": [
         "teal"
       ]
@@ -320,7 +362,8 @@
     {
       "start": "2026-10-25",
       "end": "2026-10-25",
-      "description": "Teal · Occipital Neuralgia Awareness Day · Teal",
+      "description": "Occipital Neuralgia Awareness Day",
+      "colour_name": "Teal",
       "colours": [
         "teal"
       ]
@@ -328,7 +371,8 @@
     {
       "start": "2026-10-26",
       "end": "2026-10-26",
-      "description": "Purple and Orange · National Respiratory Therapy Week · Purple and Orange",
+      "description": "National Respiratory Therapy Week",
+      "colour_name": "Purple and Orange",
       "colours": [
         "purple",
         "orange"
@@ -337,7 +381,8 @@
     {
       "start": "2026-10-26",
       "end": "2026-10-26",
-      "description": "Yellow and Purple · Intersex Awareness Day · Yellow and Purple",
+      "description": "Intersex Awareness Day",
+      "colour_name": "Yellow and Purple",
       "colours": [
         "yellow",
         "purple"
@@ -346,7 +391,8 @@
     {
       "start": "2026-10-27",
       "end": "2026-10-27",
-      "description": "Blue · World Occupational Therapists (OT) Day · Blue",
+      "description": "World Occupational Therapists (OT) Day",
+      "colour_name": "Blue",
       "colours": [
         "blue"
       ]
@@ -354,7 +400,8 @@
     {
       "start": "2026-10-27",
       "end": "2026-10-27",
-      "description": "Red · National Duty Counsel Day · Red",
+      "description": "National Duty Counsel Day",
+      "colour_name": "Red",
       "colours": [
         "red"
       ]
@@ -362,7 +409,8 @@
     {
       "start": "2026-10-28",
       "end": "2026-10-28",
-      "description": "Magenta and Teal · Media Literacy Week · Magenta and Teal",
+      "description": "Media Literacy Week",
+      "colour_name": "Magenta and Teal",
       "colours": [
         "magenta",
         "teal"
@@ -371,7 +419,8 @@
     {
       "start": "2026-10-29",
       "end": "2026-10-29",
-      "description": "Purple · Canadian Patient Safety Week (CPSW) · Purple",
+      "description": "Canadian Patient Safety Week (CPSW)",
+      "colour_name": "Purple",
       "colours": [
         "purple"
       ]
@@ -379,7 +428,8 @@
     {
       "start": "2026-10-29",
       "end": "2026-10-29",
-      "description": "Purple · Dress Purple Day – Child Abuse Prevention Month · Purple",
+      "description": "Dress Purple Day – Child Abuse Prevention Month",
+      "colour_name": "Purple",
       "colours": [
         "purple"
       ]
@@ -387,7 +437,8 @@
     {
       "start": "2026-10-29",
       "end": "2026-10-29",
-      "description": "Purple · Rett Syndrome Awareness Month · Purple",
+      "description": "Rett Syndrome Awareness Month",
+      "colour_name": "Purple",
       "colours": [
         "purple"
       ]
@@ -395,7 +446,8 @@
     {
       "start": "2026-10-31",
       "end": "2026-10-31",
-      "description": "Orange · Hallowe'en · Orange",
+      "description": "Hallowe'en",
+      "colour_name": "Orange",
       "colours": [
         "orange"
       ]
@@ -403,7 +455,8 @@
     {
       "start": "2026-10-31",
       "end": "2026-10-31",
-      "description": "Teal · Food Allergy Awareness on Halloween · Teal",
+      "description": "Food Allergy Awareness on Halloween",
+      "colour_name": "Teal",
       "colours": [
         "teal"
       ]
@@ -411,7 +464,8 @@
     {
       "start": "2026-11-01",
       "end": "2026-11-01",
-      "description": "Red · Project Red Ribbon – MADD Canada · Red",
+      "description": "Project Red Ribbon – MADD Canada",
+      "colour_name": "Red",
       "colours": [
         "red"
       ]
@@ -419,7 +473,8 @@
     {
       "start": "2026-11-02",
       "end": "2026-11-02",
-      "description": "Orange · Complex Regional Pain Syndrome (CRPS)/Reflex Sympathetic Dystrophy (RSD) Awareness · Orange",
+      "description": "Complex Regional Pain Syndrome (CRPS)/Reflex Sympathetic Dystrophy (RSD) Awareness",
+      "colour_name": "Orange",
       "colours": [
         "orange"
       ]
@@ -427,7 +482,8 @@
     {
       "start": "2026-11-02",
       "end": "2026-11-02",
-      "description": "Yellow and Green · Daily Bread Food Bank - Who's Hungry report · Yellow and Green",
+      "description": "Daily Bread Food Bank - Who's Hungry report",
+      "colour_name": "Yellow and Green",
       "colours": [
         "yellow",
         "green"
@@ -436,7 +492,8 @@
     {
       "start": "2026-11-03",
       "end": "2026-11-03",
-      "description": "Purple and White · Treaties Recognition Week · Purple and White",
+      "description": "Treaties Recognition Week",
+      "colour_name": "Purple and White",
       "colours": [
         "purple",
         "white"
@@ -445,7 +502,8 @@
     {
       "start": "2026-11-04",
       "end": "2026-11-04",
-      "description": "Green · National Runaway Prevention Month · Green",
+      "description": "National Runaway Prevention Month",
+      "colour_name": "Green",
       "colours": [
         "green"
       ]
@@ -453,7 +511,8 @@
     {
       "start": "2026-11-04",
       "end": "2026-11-04",
-      "description": "Green · Show your 4-H Colours · Green",
+      "description": "Show your 4-H Colours",
+      "colour_name": "Green",
       "colours": [
         "green"
       ]
@@ -461,7 +520,8 @@
     {
       "start": "2026-11-05",
       "end": "2026-11-05",
-      "description": "Purple · Osteoporosis Awareness Month · Purple",
+      "description": "Osteoporosis Awareness Month",
+      "colour_name": "Purple",
       "colours": [
         "purple"
       ]
@@ -469,7 +529,8 @@
     {
       "start": "2026-11-06",
       "end": "2026-11-06",
-      "description": "Red and White · National Tribute Dinner in support of Military members, veterans and their families · Red and White",
+      "description": "National Tribute Dinner in support of Military members, veterans and their families",
+      "colour_name": "Red and White",
       "colours": [
         "red",
         "white"
@@ -478,7 +539,8 @@
     {
       "start": "2026-11-06",
       "end": "2026-11-06",
-      "description": "Red · Crohn’s and Colitis Awareness Month · Red",
+      "description": "Crohn’s and Colitis Awareness Month",
+      "colour_name": "Red",
       "colours": [
         "red"
       ]
@@ -486,7 +548,8 @@
     {
       "start": "2026-11-08",
       "end": "2026-11-08",
-      "description": "Purple and Orange · Diwali · Purple and Orange",
+      "description": "Diwali",
+      "colour_name": "Purple and Orange",
       "colours": [
         "purple",
         "orange"
@@ -495,7 +558,8 @@
     {
       "start": "2026-11-08",
       "end": "2026-11-08",
-      "description": "Red and White · Indigenous Veterans Day · Red and White",
+      "description": "Indigenous Veterans Day",
+      "colour_name": "Red and White",
       "colours": [
         "red",
         "white"
@@ -504,7 +568,8 @@
     {
       "start": "2026-11-09",
       "end": "2026-11-09",
-      "description": "Burgundy, Dark green and Gold · AI Safety Week · Burgundy, Dark green and Gold",
+      "description": "AI Safety Week",
+      "colour_name": "Burgundy, Dark green and Gold",
       "colours": [
         "burgundy",
         "green",
@@ -514,7 +579,8 @@
     {
       "start": "2026-11-10",
       "end": "2026-11-10",
-      "description": "Blue · Eczema Awareness Month · Blue",
+      "description": "Eczema Awareness Month",
+      "colour_name": "Blue",
       "colours": [
         "blue"
       ]
@@ -522,7 +588,8 @@
     {
       "start": "2026-11-10",
       "end": "2026-11-10",
-      "description": "Red · Toronto Reel Asian International Film Festival · Red",
+      "description": "Toronto Reel Asian International Film Festival",
+      "colour_name": "Red",
       "colours": [
         "red"
       ]
@@ -530,7 +597,8 @@
     {
       "start": "2026-11-10",
       "end": "2026-11-10",
-      "description": "White · World Neuroendocrine Tumour (NET) Awareness Day · White",
+      "description": "World Neuroendocrine Tumour (NET) Awareness Day",
+      "colour_name": "White",
       "colours": [
         "white"
       ]
@@ -538,7 +606,8 @@
     {
       "start": "2026-11-11",
       "end": "2026-11-11",
-      "description": "Red · Remembrance Day · Red · See details",
+      "description": "Remembrance Day",
+      "colour_name": "Red",
       "colours": [
         "red"
       ]
@@ -546,7 +615,8 @@
     {
       "start": "2026-11-12",
       "end": "2026-11-12",
-      "description": "Blue · World Pneumonia Day · Blue",
+      "description": "World Pneumonia Day",
+      "colour_name": "Blue",
       "colours": [
         "blue"
       ]
@@ -554,15 +624,18 @@
     {
       "start": "2026-11-14",
       "end": "2026-11-14",
-      "description": "Blue and Grey · Georgetown Hospital Foundation Gala – Fundraiser · Blue and Grey",
+      "description": "Georgetown Hospital Foundation Gala – Fundraiser",
+      "colour_name": "Blue and Grey",
       "colours": [
-        "blue"
+        "blue",
+        "grey"
       ]
     },
     {
       "start": "2026-11-14",
       "end": "2026-11-14",
-      "description": "Blue · World Diabetes Day and National Diabetes Month · Blue",
+      "description": "World Diabetes Day and National Diabetes Month",
+      "colour_name": "Blue",
       "colours": [
         "blue"
       ]
@@ -570,7 +643,8 @@
     {
       "start": "2026-11-15",
       "end": "2026-11-15",
-      "description": "Purple · World Prematurity Day · Purple",
+      "description": "World Prematurity Day",
+      "colour_name": "Purple",
       "colours": [
         "purple"
       ]
@@ -578,7 +652,8 @@
     {
       "start": "2026-11-15",
       "end": "2026-11-15",
-      "description": "Yellow, Orange and Red · World Day of Remembrance for Road Traffic Victims · Yellow, Orange and Red",
+      "description": "World Day of Remembrance for Road Traffic Victims",
+      "colour_name": "Yellow, Orange and Red",
       "colours": [
         "yellow",
         "orange",
@@ -588,7 +663,8 @@
     {
       "start": "2026-11-18",
       "end": "2026-11-18",
-      "description": "Yellow · Motionball in support of the Special Olympics Canada Foundation · Yellow",
+      "description": "Motionball in support of the Special Olympics Canada Foundation",
+      "colour_name": "Yellow",
       "colours": [
         "yellow"
       ]
@@ -596,7 +672,8 @@
     {
       "start": "2026-11-19",
       "end": "2026-11-19",
-      "description": "Blue · National Children's Grief Awareness Day · Blue",
+      "description": "National Children's Grief Awareness Day",
+      "colour_name": "Blue",
       "colours": [
         "blue"
       ]
@@ -604,7 +681,8 @@
     {
       "start": "2026-11-19",
       "end": "2026-11-19",
-      "description": "Lavender · Early Age Onset Cancer Awareness Day · Lavender",
+      "description": "Early Age Onset Cancer Awareness Day",
+      "colour_name": "Lavender",
       "colours": [
         "lavender"
       ]
@@ -612,7 +690,8 @@
     {
       "start": "2026-11-19",
       "end": "2026-11-19",
-      "description": "Red · CANFAR’s Bloor Street Entertains (BSE) · Red",
+      "description": "CANFAR’s Bloor Street Entertains (BSE)",
+      "colour_name": "Red",
       "colours": [
         "red"
       ]
@@ -620,7 +699,8 @@
     {
       "start": "2026-11-19",
       "end": "2026-11-19",
-      "description": "Teal and Orange · National Enteropathic Arthritis Awareness Day · Teal and Orange",
+      "description": "National Enteropathic Arthritis Awareness Day",
+      "colour_name": "Teal and Orange",
       "colours": [
         "teal",
         "orange"
@@ -629,7 +709,8 @@
     {
       "start": "2026-11-20",
       "end": "2026-11-20",
-      "description": "Light Blue, White and Light Pink · Transgender Day of Remembrance · Light Blue, White and Light Pink",
+      "description": "Transgender Day of Remembrance",
+      "colour_name": "Light Blue, White and Light Pink",
       "colours": [
         "light blue",
         "white",
@@ -639,7 +720,8 @@
     {
       "start": "2026-11-20",
       "end": "2026-11-20",
-      "description": "Red and White · Worldwide Pressure Injury Prevention Day · Red and White",
+      "description": "Worldwide Pressure Injury Prevention Day",
+      "colour_name": "Red and White",
       "colours": [
         "red",
         "white"
@@ -648,7 +730,8 @@
     {
       "start": "2026-11-22",
       "end": "2026-11-22",
-      "description": "Red · 22q11.2 Deletion Syndrome (“22q”) Awareness · Red",
+      "description": "22q11.2 Deletion Syndrome (“22q”) Awareness",
+      "colour_name": "Red",
       "colours": [
         "red"
       ]
@@ -656,7 +739,8 @@
     {
       "start": "2026-11-22",
       "end": "2026-11-22",
-      "description": "White · Lung Cancer Awareness Month · White",
+      "description": "Lung Cancer Awareness Month",
+      "colour_name": "White",
       "colours": [
         "white"
       ]
@@ -664,7 +748,8 @@
     {
       "start": "2026-11-24",
       "end": "2026-11-24",
-      "description": "Light Blue and Blue · World Antimicrobial Resistance Awareness Week · Light Blue and Blue",
+      "description": "World Antimicrobial Resistance Awareness Week",
+      "colour_name": "Light Blue and Blue",
       "colours": [
         "light blue",
         "blue"
@@ -673,7 +758,8 @@
     {
       "start": "2026-11-24",
       "end": "2026-11-24",
-      "description": "Orange · COPD (Chronic obstructive pulmonary disease) Awareness Month · Orange",
+      "description": "COPD (Chronic obstructive pulmonary disease) Awareness Month",
+      "colour_name": "Orange",
       "colours": [
         "orange"
       ]
@@ -681,7 +767,8 @@
     {
       "start": "2026-11-25",
       "end": "2026-11-25",
-      "description": "Purple and White · International Day for the Elimination of Violence against Women · Purple and White",
+      "description": "International Day for the Elimination of Violence against Women",
+      "colour_name": "Purple and White",
       "colours": [
         "purple",
         "white"
@@ -690,7 +777,8 @@
     {
       "start": "2026-11-25",
       "end": "2026-11-25",
-      "description": "Purple · Radon Action Month · Purple",
+      "description": "Radon Action Month",
+      "colour_name": "Purple",
       "colours": [
         "purple"
       ]
@@ -698,7 +786,8 @@
     {
       "start": "2026-11-25",
       "end": "2026-11-25",
-      "description": "Red · YMCA Canada’s 175th Anniversary · Red",
+      "description": "YMCA Canada’s 175th Anniversary",
+      "colour_name": "Red",
       "colours": [
         "red"
       ]
@@ -706,7 +795,8 @@
     {
       "start": "2026-11-28",
       "end": "2026-11-28",
-      "description": "Purple · Pulmonary Hypertension (PH) Awareness Month · Purple",
+      "description": "Pulmonary Hypertension (PH) Awareness Month",
+      "colour_name": "Purple",
       "colours": [
         "purple"
       ]
@@ -714,8 +804,11 @@
     {
       "start": "2026-11-30",
       "end": "2026-11-30",
-      "description": "Periwinkle · Stomach Cancer Awareness Day · Periwinkle · Join our newsletter · Get the latest on upcoming events, seasonal dining menus and other CN Tower updates, straight to your inbox. Preserve visible fields",
-      "colours": []
+      "description": "Stomach Cancer Awareness Day",
+      "colour_name": "Periwinkle",
+      "colours": [
+        "periwinkle"
+      ]
     }
   ]
 }
