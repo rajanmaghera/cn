@@ -1,7 +1,16 @@
 {
   "source": "https://www.cntower.ca/lighting-schedule",
-  "updated": "2026-10-13T16:57:41+00:00",
+  "updated": "2026-10-13T17:00:43+00:00",
   "entries": [
+    {
+      "start": "2026-09-30",
+      "end": "2026-09-30",
+      "description": "International Recovery Day",
+      "colour_name": "Purple",
+      "colours": [
+        "purple"
+      ]
+    },
     {
       "start": "2026-09-30",
       "end": "2026-09-30",
@@ -23,28 +32,10 @@
     {
       "start": "2026-09-30",
       "end": "2026-09-30",
-      "description": "International Recovery Day",
-      "colour_name": "Purple",
-      "colours": [
-        "purple"
-      ]
-    },
-    {
-      "start": "2026-09-30",
-      "end": "2026-09-30",
       "description": "Rowan's Law Day (Concussion Safety)",
       "colour_name": "Purple",
       "colours": [
         "purple"
-      ]
-    },
-    {
-      "start": "2026-10-01",
-      "end": "2026-10-01",
-      "description": "World Liver Cancer Month",
-      "colour_name": "Green",
-      "colours": [
-        "green"
       ]
     },
     {
@@ -68,6 +59,15 @@
       ]
     },
     {
+      "start": "2026-10-01",
+      "end": "2026-10-01",
+      "description": "World Liver Cancer Month",
+      "colour_name": "Green",
+      "colours": [
+        "green"
+      ]
+    },
+    {
       "start": "2026-10-02",
       "end": "2026-10-02",
       "description": "International Wrongful Conviction Day",
@@ -79,22 +79,22 @@
     {
       "start": "2026-10-03",
       "end": "2026-10-03",
-      "description": "Nuit Blanche",
-      "colour_name": "Black and White",
-      "colours": [
-        "black",
-        "white"
-      ]
-    },
-    {
-      "start": "2026-10-03",
-      "end": "2026-10-03",
       "description": "Laps for Life - Cancer Research Fundraiser",
       "colour_name": "Blue, White and Black",
       "colours": [
         "blue",
         "white",
         "black"
+      ]
+    },
+    {
+      "start": "2026-10-03",
+      "end": "2026-10-03",
+      "description": "Nuit Blanche",
+      "colour_name": "Black and White",
+      "colours": [
+        "black",
+        "white"
       ]
     },
     {
@@ -177,17 +177,6 @@
     {
       "start": "2026-10-12",
       "end": "2026-10-12",
-      "description": "Thanksgiving",
-      "colour_name": "Orange, Red and Yellow",
-      "colours": [
-        "orange",
-        "red",
-        "yellow"
-      ]
-    },
-    {
-      "start": "2026-10-12",
-      "end": "2026-10-12",
       "description": "Breast Cancer Awareness Month",
       "colour_name": "Pink",
       "colours": [
@@ -201,6 +190,17 @@
       "colour_name": "Teal",
       "colours": [
         "teal"
+      ]
+    },
+    {
+      "start": "2026-10-12",
+      "end": "2026-10-12",
+      "description": "Thanksgiving",
+      "colour_name": "Orange, Red and Yellow",
+      "colours": [
+        "orange",
+        "red",
+        "yellow"
       ]
     },
     {
@@ -227,21 +227,21 @@
     {
       "start": "2026-10-15",
       "end": "2026-10-15",
-      "description": "National Disability Employment Awareness Month (NDEAM)",
-      "colour_name": "Dark Blue and Purple",
+      "description": "International Pregnancy and Infant Loss Remembrance Day and National Pregnancy and Infant Loss Awareness Month",
+      "colour_name": "Pink, Light Blue and Purple",
       "colours": [
-        "blue",
+        "pink",
+        "light blue",
         "purple"
       ]
     },
     {
       "start": "2026-10-15",
       "end": "2026-10-15",
-      "description": "International Pregnancy and Infant Loss Remembrance Day and National Pregnancy and Infant Loss Awareness Month",
-      "colour_name": "Pink, Light Blue and Purple",
+      "description": "National Disability Employment Awareness Month (NDEAM)",
+      "colour_name": "Dark Blue and Purple",
       "colours": [
-        "pink",
-        "light blue",
+        "blue",
         "purple"
       ]
     },
@@ -371,16 +371,6 @@
     {
       "start": "2026-10-26",
       "end": "2026-10-26",
-      "description": "National Respiratory Therapy Week",
-      "colour_name": "Purple and Orange",
-      "colours": [
-        "purple",
-        "orange"
-      ]
-    },
-    {
-      "start": "2026-10-26",
-      "end": "2026-10-26",
       "description": "Intersex Awareness Day",
       "colour_name": "Yellow and Purple",
       "colours": [
@@ -389,12 +379,13 @@
       ]
     },
     {
-      "start": "2026-10-27",
-      "end": "2026-10-27",
-      "description": "World Occupational Therapists (OT) Day",
-      "colour_name": "Blue",
+      "start": "2026-10-26",
+      "end": "2026-10-26",
+      "description": "National Respiratory Therapy Week",
+      "colour_name": "Purple and Orange",
       "colours": [
-        "blue"
+        "purple",
+        "orange"
       ]
     },
     {
@@ -404,6 +395,15 @@
       "colour_name": "Red",
       "colours": [
         "red"
+      ]
+    },
+    {
+      "start": "2026-10-27",
+      "end": "2026-10-27",
+      "description": "World Occupational Therapists (OT) Day",
+      "colour_name": "Blue",
+      "colours": [
+        "blue"
       ]
     },
     {
@@ -446,19 +446,19 @@
     {
       "start": "2026-10-31",
       "end": "2026-10-31",
-      "description": "Hallowe'en",
-      "colour_name": "Orange",
+      "description": "Food Allergy Awareness on Halloween",
+      "colour_name": "Teal",
       "colours": [
-        "orange"
+        "teal"
       ]
     },
     {
       "start": "2026-10-31",
       "end": "2026-10-31",
-      "description": "Food Allergy Awareness on Halloween",
-      "colour_name": "Teal",
+      "description": "Hallowe'en",
+      "colour_name": "Orange",
       "colours": [
-        "teal"
+        "orange"
       ]
     },
     {
@@ -529,20 +529,20 @@
     {
       "start": "2026-11-06",
       "end": "2026-11-06",
-      "description": "National Tribute Dinner in support of Military members, veterans and their families",
-      "colour_name": "Red and White",
+      "description": "Crohn’s and Colitis Awareness Month",
+      "colour_name": "Red",
       "colours": [
-        "red",
-        "white"
+        "red"
       ]
     },
     {
       "start": "2026-11-06",
       "end": "2026-11-06",
-      "description": "Crohn’s and Colitis Awareness Month",
-      "colour_name": "Red",
+      "description": "National Tribute Dinner in support of Military members, veterans and their families",
+      "colour_name": "Red and White",
       "colours": [
-        "red"
+        "red",
+        "white"
       ]
     },
     {
@@ -643,21 +643,21 @@
     {
       "start": "2026-11-15",
       "end": "2026-11-15",
-      "description": "World Prematurity Day",
-      "colour_name": "Purple",
-      "colours": [
-        "purple"
-      ]
-    },
-    {
-      "start": "2026-11-15",
-      "end": "2026-11-15",
       "description": "World Day of Remembrance for Road Traffic Victims",
       "colour_name": "Yellow, Orange and Red",
       "colours": [
         "yellow",
         "orange",
         "red"
+      ]
+    },
+    {
+      "start": "2026-11-15",
+      "end": "2026-11-15",
+      "description": "World Prematurity Day",
+      "colour_name": "Purple",
+      "colours": [
+        "purple"
       ]
     },
     {
@@ -672,10 +672,10 @@
     {
       "start": "2026-11-19",
       "end": "2026-11-19",
-      "description": "National Children's Grief Awareness Day",
-      "colour_name": "Blue",
+      "description": "CANFAR’s Bloor Street Entertains (BSE)",
+      "colour_name": "Red",
       "colours": [
-        "blue"
+        "red"
       ]
     },
     {
@@ -690,10 +690,10 @@
     {
       "start": "2026-11-19",
       "end": "2026-11-19",
-      "description": "CANFAR’s Bloor Street Entertains (BSE)",
-      "colour_name": "Red",
+      "description": "National Children's Grief Awareness Day",
+      "colour_name": "Blue",
       "colours": [
-        "red"
+        "blue"
       ]
     },
     {
@@ -748,20 +748,20 @@
     {
       "start": "2026-11-24",
       "end": "2026-11-24",
-      "description": "World Antimicrobial Resistance Awareness Week",
-      "colour_name": "Light Blue and Blue",
+      "description": "COPD (Chronic obstructive pulmonary disease) Awareness Month",
+      "colour_name": "Orange",
       "colours": [
-        "light blue",
-        "blue"
+        "orange"
       ]
     },
     {
       "start": "2026-11-24",
       "end": "2026-11-24",
-      "description": "COPD (Chronic obstructive pulmonary disease) Awareness Month",
-      "colour_name": "Orange",
+      "description": "World Antimicrobial Resistance Awareness Week",
+      "colour_name": "Light Blue and Blue",
       "colours": [
-        "orange"
+        "light blue",
+        "blue"
       ]
     },
     {
