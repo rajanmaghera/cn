@@ -1,6 +1,6 @@
 {
   "source": "https://www.cntower.ca/lighting-schedule",
-  "updated": "2026-10-13T17:00:43+00:00",
+  "updated": "2026-10-19T22:22:52+00:00",
   "entries": [
     {
       "start": "2026-09-30",
@@ -273,6 +273,13 @@
         "pink",
         "purple"
       ]
+    },
+    {
+      "start": "2026-10-19",
+      "end": "2026-10-19",
+      "description": "Dim · Tonight the CN Tower will dim for 5 minutes at the bottom of each hour to honour the victims of the fire at the Canadian Forces Base Wainwright",
+      "colour_name": "",
+      "colours": []
     },
     {
       "start": "2026-10-19",
