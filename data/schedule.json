@@ -1,6 +1,6 @@
 {
   "source": "https://www.cntower.ca/lighting-schedule",
-  "updated": "2026-10-19T22:22:52+00:00",
+  "updated": "2026-10-21T21:44:46+00:00",
   "entries": [
     {
       "start": "2026-09-30",
@@ -355,6 +355,17 @@
         "red",
         "white",
         "gold"
+      ]
+    },
+    {
+      "start": "2026-10-24",
+      "end": "2026-10-24",
+      "description": "World Polio Day",
+      "colour_name": "Red, Yellow and White",
+      "colours": [
+        "red",
+        "yellow",
+        "white"
       ]
     },
     {
