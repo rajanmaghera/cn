@@ -1,6 +1,6 @@
 {
   "source": "https://www.cntower.ca/lighting-schedule",
-  "updated": "2026-10-26T22:41:20+00:00",
+  "updated": "2026-10-30T22:23:00+00:00",
   "entries": [
     {
       "start": "2026-09-30",
@@ -482,6 +482,16 @@
     {
       "start": "2026-11-01",
       "end": "2026-11-01",
+      "description": "Lennox-Gastaut Syndrome (LGS) Awareness Day",
+      "colour_name": "Green and Purple",
+      "colours": [
+        "green",
+        "purple"
+      ]
+    },
+    {
+      "start": "2026-11-01",
+      "end": "2026-11-01",
       "description": "Project Red Ribbon – MADD Canada",
       "colour_name": "Red",
       "colours": [
@@ -533,6 +543,17 @@
       "colour_name": "Green",
       "colours": [
         "green"
+      ]
+    },
+    {
+      "start": "2026-11-05",
+      "end": "2026-11-05",
+      "description": "Give A Mile Holiday Campaign – facilitating travel for families during end-of-life care",
+      "colour_name": "Red, Teal and White",
+      "colours": [
+        "red",
+        "teal",
+        "white"
       ]
     },
     {
@@ -640,6 +661,16 @@
       ]
     },
     {
+      "start": "2026-11-13",
+      "end": "2026-11-13",
+      "description": "Mirror Ball Gala for Look Good Feel Better - supporting people experiencing cancer",
+      "colour_name": "Purple and Pink",
+      "colours": [
+        "purple",
+        "pink"
+      ]
+    },
+    {
       "start": "2026-11-14",
       "end": "2026-11-14",
       "description": "Georgetown Hospital Foundation Gala – Fundraiser",
@@ -676,6 +707,16 @@
       "colour_name": "Purple",
       "colours": [
         "purple"
+      ]
+    },
+    {
+      "start": "2026-11-16",
+      "end": "2026-11-16",
+      "description": "Louis Riel Day",
+      "colour_name": "Red and Blue",
+      "colours": [
+        "red",
+        "blue"
       ]
     },
     {
@@ -722,6 +763,24 @@
       "colours": [
         "teal",
         "orange"
+      ]
+    },
+    {
+      "start": "2026-11-19",
+      "end": "2026-11-19",
+      "description": "Sleep Out: Executive Edition – Covenant House fundraiser",
+      "colour_name": "Blue",
+      "colours": [
+        "blue"
+      ]
+    },
+    {
+      "start": "2026-11-19",
+      "end": "2026-11-19",
+      "description": "World Pancreatic Cancer Day",
+      "colour_name": "Purple",
+      "colours": [
+        "purple"
       ]
     },
     {
