@@ -1,6 +1,6 @@
 {
   "source": "https://www.cntower.ca/lighting-schedule",
-  "updated": "2026-10-30T22:23:00+00:00",
+  "updated": "2026-11-01T06:08:58+00:00",
   "entries": [
     {
       "start": "2026-09-30",
@@ -885,6 +885,112 @@
       "colour_name": "Periwinkle",
       "colours": [
         "periwinkle"
+      ]
+    },
+    {
+      "start": "2026-12-03",
+      "end": "2026-12-03",
+      "description": "International Day of Persons with Disabilities (IDPWD)",
+      "colour_name": "Purple",
+      "colours": [
+        "purple"
+      ]
+    },
+    {
+      "start": "2026-12-04",
+      "end": "2026-12-04",
+      "description": "First night of Hanukkah",
+      "colour_name": "Blue and White",
+      "colours": [
+        "blue",
+        "white"
+      ]
+    },
+    {
+      "start": "2026-12-06",
+      "end": "2026-12-06",
+      "description": "National Day of Remembrance and Action on Violence Against Women",
+      "colour_name": "Red",
+      "colours": [
+        "red"
+      ]
+    },
+    {
+      "start": "2026-12-07",
+      "end": "2026-12-07",
+      "description": "World Twin to Twin Transfusion Syndrome Awareness Day",
+      "colour_name": "Light Blue",
+      "colours": [
+        "light blue"
+      ]
+    },
+    {
+      "start": "2026-12-08",
+      "end": "2026-12-08",
+      "description": "Toronto Sceptres’ first home game",
+      "colour_name": "Blue and Gold",
+      "colours": [
+        "blue",
+        "gold"
+      ]
+    },
+    {
+      "start": "2026-12-10",
+      "end": "2026-12-10",
+      "description": "Human Rights Day",
+      "colour_name": "Blue",
+      "colours": [
+        "blue"
+      ]
+    },
+    {
+      "start": "2026-12-13",
+      "end": "2026-12-13",
+      "description": "Impaired Driving Awareness - Holiday R.I.D.E program",
+      "colour_name": "Red",
+      "colours": [
+        "red"
+      ]
+    },
+    {
+      "start": "2026-12-21",
+      "end": "2026-12-21",
+      "description": "First Day of Winter",
+      "colour_name": "Blue and White",
+      "colours": [
+        "blue",
+        "white"
+      ]
+    },
+    {
+      "start": "2026-12-25",
+      "end": "2026-12-25",
+      "description": "Christmas Day",
+      "colour_name": "Red, White and Green",
+      "colours": [
+        "red",
+        "white",
+        "green"
+      ]
+    },
+    {
+      "start": "2026-12-26",
+      "end": "2026-12-26",
+      "description": "Kwanzaa",
+      "colour_name": "Red, Black and Green",
+      "colours": [
+        "red",
+        "black",
+        "green"
+      ]
+    },
+    {
+      "start": "2026-12-31",
+      "end": "2026-12-31",
+      "description": "New Year's Eve",
+      "colour_name": "Rainbow",
+      "colours": [
+        "rainbow"
       ]
     }
   ]
