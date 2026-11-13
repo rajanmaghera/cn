@@ -1,6 +1,6 @@
 {
   "source": "https://www.cntower.ca/lighting-schedule",
-  "updated": "2026-11-05T19:58:37+00:00",
+  "updated": "2026-11-13T19:44:06+00:00",
   "entries": [
     {
       "start": "2026-09-30",
@@ -820,6 +820,16 @@
       "colour_name": "White",
       "colours": [
         "white"
+      ]
+    },
+    {
+      "start": "2026-11-23",
+      "end": "2026-11-23",
+      "description": "Toy Mountain toy drive",
+      "colour_name": "Red and Green",
+      "colours": [
+        "red",
+        "green"
       ]
     },
     {
