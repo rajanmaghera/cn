@@ -1,6 +1,6 @@
 {
   "source": "https://www.cntower.ca/lighting-schedule",
-  "updated": "2026-11-13T19:44:06+00:00",
+  "updated": "2026-11-20T20:23:37+00:00",
   "entries": [
     {
       "start": "2026-09-30",
@@ -844,6 +844,15 @@
     {
       "start": "2026-11-24",
       "end": "2026-11-24",
+      "description": "In honour of International Day for the Elimination of Violence against Women on November 25",
+      "colour_name": "Orange",
+      "colours": [
+        "orange"
+      ]
+    },
+    {
+      "start": "2026-11-24",
+      "end": "2026-11-24",
       "description": "World Antimicrobial Resistance Awareness Week",
       "colour_name": "Light Blue and Blue",
       "colours": [
@@ -951,6 +960,16 @@
       "colour_name": "Blue",
       "colours": [
         "blue"
+      ]
+    },
+    {
+      "start": "2026-12-12",
+      "end": "2026-12-12",
+      "description": "Pulmonary Fibrosis Awareness",
+      "colour_name": "Light Blue and Purple",
+      "colours": [
+        "light blue",
+        "purple"
       ]
     },
     {
